@@ -1,5 +1,6 @@
 # is-html-object
 Check if referenced object is a DOM element or Browser Object
+
 [![npm](https://img.shields.io/npm/v/is-html-object.svg?style=flat-square)](https://www.npmjs.com/package/is-html-object)
 [![npm](https://img.shields.io/npm/dt/is-html-object.svg?style=flat-square)](https://www.npmjs.com/package/is-html-object)
 [![npm](https://img.shields.io/npm/l/is-html-object.svg?style=flat-square)](https://www.npmjs.com/package/is-html-object)
@@ -13,6 +14,7 @@ npm install --save is-html-object
 
 ### isHtmlObject(el|selector)
 Check if `el` or `selector` is a DOM element or Browser Object
+
 It's equivalent 
 ```js
 isHtmlObject.htmlElement(el|selector) || isHtmlObject.browserObject(el|selector)
@@ -31,7 +33,9 @@ if (isHtmlObject(document.getElementById('root'))) {
 
 ### browserObject(el|selector)
 Check if `el` or `selector` is an Browser Object
+
 Browser Object includes `window`, `screen`, `document`, `navigator`, `history`, `location`
+
 Example:
 ```js
 if (isHtmlObject.browserObject(window)) {
@@ -45,12 +49,14 @@ if (isHtmlObject.screen(screen)) {
 
 ### htmlElement(el|selector)
 Check if `el` or `selector` is a DOM element
+
 Example:
 ```js
 console.log(isHtmlObject.htmlElement(window)) // false
 console.log(isHtmlObject.htmlElement('body')) // true
 ```
 
+### Others
 Check if `el` or `selector` is an certain object
 ```js
 if (isHtmlObject.screen(screen)) {
@@ -69,7 +75,6 @@ if (isHtmlObject.div('#root')) {
 	// is div element
 }
 ```
-etc.
 
 ## Usage
 ```js

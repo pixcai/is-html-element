@@ -1,0 +1,33 @@
+{
+  "name": "is-html-object",
+  "version": "1.0.0",
+  "description": "Check if referenced object is a DOM element or browser object",
+  "main": "is-html-object.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixcai/is-html-object.git"
+  },
+  "keywords": [
+    "element",
+    "object",
+    "dom",
+    "bom",
+    "check",
+    "is",
+    "html"
+  ],
+  "author": "pixcai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixcai/is-html-object/issues"
+  },
+  "homepage": "https://github.com/pixcai/is-html-object#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

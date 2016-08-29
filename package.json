@@ -1,7 +1,7 @@
 {
   "name": "is-html-object",
-  "version": "1.0.0",
-  "description": "Check if referenced object is a DOM element or browser object",
+  "version": "1.1.0",
+  "description": "Check if referenced object is a DOM element or Browser Object",
   "main": "is-html-object.js",
   "scripts": {
     "build": "gulp"

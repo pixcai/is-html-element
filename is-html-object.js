@@ -7,16 +7,17 @@
     root.isHtmlObject = isHtmlObject;
   }
 })(this, function() {
+  function __check(el) {
+    if (typeof el === 'string') {
+      el = document.querySelector(el);
+    }
+    return el;
+  }
+
   var isHtmlObject = function(el) {
     if (!(this instanceof isHtmlObject)) {
-      if (typeof el === 'string') {
-        el = document.querySelector(el);
-      }
-      if (el && typeof el === 'object') {
-        return isHtmlObject.htmlElement(el) || isHtmlObject.browserObject(el);
-      } else {
-        return false;
-      }
+      el = __check(el);
+      return isHtmlObject.htmlElement(el) || isHtmlObject.browserObject(el);
     }
   };
 
@@ -31,6 +32,7 @@
 
   BrowserObjects.forEach(function(object) {
     isHtmlObject[object] = function(el) {
+      el = __check(el);
       return RegExp(object).test(
         Object.prototype.toString.call(el).toLowerCase()
       );
@@ -66,6 +68,7 @@
 
   HtmlTags.forEach(function(tag) {
     isHtmlObject[tag] = function(el) {
+      el = __check(el);
       return RegExp('html' + tag + 'element').test(
         Object.prototype.toString.call(el).toLowerCase()
       );

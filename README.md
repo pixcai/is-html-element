@@ -18,6 +18,10 @@ if (isHtmlObject('#root')) {
  // is valid DOM element
 }
 
+if (isHtmlObject.htmlElement('#root')) {
+	// is valid DOM element
+}
+
 // Pass a DOM element
 if (isHtmlObject(document.getElementById('root'))) {
  // is valid DOM element
